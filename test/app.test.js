@@ -1,8 +1,7 @@
-const chai = require('chai');
-const expect = chai.expect;
+import { expect } from 'chai';
 
 describe('Sample Test', () => {
-    it('should return true', () => {
-        expect(true).to.equal(true);
-    });
+  it('should pass this test', () => {
+    expect(1 + 1).to.equal(2);
+  });
 });
