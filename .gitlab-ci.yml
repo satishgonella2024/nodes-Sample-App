@@ -1,16 +1,12 @@
-stages:
-  - build
-  - test
-  - deploy
-
 build-job:
   stage: build
   tags:
     - sample
+  cache:
+    paths:
+      - node_modules/
   script:
     - echo "Building the application..."
-    - node -v  # Verify Node.js version
-    - npm -v   # Verify npm version
     - npm install
     - echo "Build successful!"
 
@@ -20,10 +16,10 @@ test-job:
     - sample
   script:
     - echo "Running tests..."
-    - node -v  # Verify Node.js version
-    - npm -v   # Verify npm version
-    - npm install  # Reinstall dependencies
     - npm test
+  artifacts:
+    paths:
+      - test-results/
 
 deploy-job:
   stage: deploy
