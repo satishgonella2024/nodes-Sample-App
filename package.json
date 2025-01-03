@@ -2,11 +2,9 @@
   "name": "nodejs-sample-app",
   "version": "1.0.0",
   "main": "index.js",
-  {
-    "scripts": {
-      "start": "node index.js",
-      "test": "mocha test/**/*.test.js"
-    }
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha test/**/*.test.js"
   },
   "keywords": [],
   "author": "",
