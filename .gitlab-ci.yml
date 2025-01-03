@@ -1,0 +1,29 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build-job:
+  stage: build
+  tags:
+    - sample
+  script:
+    - echo "Building the application..."
+    - npm install
+    - echo "Build successful!"
+
+test-job:
+  stage: test
+  tags:
+    - sample
+  script:
+    - echo "Running tests..."
+    - npm test
+
+deploy-job:
+  stage: deploy
+  tags:
+    - sample
+  script:
+    - echo "Deploying the application..."
+    - echo "Application deployed successfully!"
